@@ -1,0 +1,56 @@
+body
+	h1, h2, h3, h4, h5, h6
+		font-family: $font-title
+		font-weight: 900
+		color: $preto
+	h1
+		+font-size(56px)
+
+	h2
+		+font-size(24px)
+		+breakpoint(sm)
+			+font-size(20px)
+		+breakpoint(md)
+			+font-size(28px)
+		+breakpoint(lg)
+			+font-size(32px)
+
+	h3 
+		+font-size(24px)
+
+	h4 
+		+font-size(18px)
+
+	p 
+		+font-size(16px)
+		line-height: 20px
+		color: $cinza-paragraph
+		+breakpoint(md)
+			+font-size(18px)
+			line-height: 22px
+	p, a, span
+		font-family: $font-padrao
+	input
+		&:placeholder
+			font-family: $font-padrao
+
+	span
+		+font-size(16px)
+	.cinza
+		color: $cinza
+	.preto
+		color: $preto
+	a.verde
+		+default_transition()
+		&:hover
+			text-decoration: none
+			color: $verde-hover
+	.verde
+		color: $verde
+	.b-azul-marinho
+		background-color: $azul-marinho
+	.b-azul
+		background-color: $azul
+
+	.address
+		+font-size(22px)

@@ -1,0 +1,96 @@
+body.scrolled
+	.site-header
+		background-color: $branco
+		padding-top: 1.5rem
+		padding-bottom: 1.5rem
+		+shadow(0px 0px 5px 2px rgba(70, 70, 70, 0.3))
+		.menu-list
+			li
+				a
+					color: $cinza-paragraph
+					&:hover
+						color: $verde
+				.selected
+					color: $verde
+.site-header
+	+default_transition()
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 300
+	padding-top: 68px
+	padding-bottom: 0
+	.menu-list
+		margin-bottom: 0
+		li
+			a
+				+default_transition()
+				text-transform: uppercase
+				color: $cinza
+				&:hover
+					color: $verde
+					text-decoration: none
+			.selected
+				color: $verde
+
+// Menu responsivo
+
+.menu-open
+	.responsive-menu
+		right: 0
+		.menu-toggle
+			span
+				&:first-child
+					+transform(rotate(45deg) translate(5px, 7px))
+				&:last-child
+					+transform(rotate(-45deg) translate(5px, -6px))
+				&:nth-child(2)
+					+opacity(0)
+.responsive-menu
+	position: fixed
+	top: 0
+	padding: 1rem
+	z-index: 300
+	right: -145px
+	+default_transition()
+	+shadow(0px 0px 2px 0px #333)
+	background-color: rgba($azul, 0.98)
+	+breakpoint(sm)
+		display: none
+	.menu-toggle
+		cursor: pointer
+		width: 40px
+		position: absolute
+		left: -4rem
+		padding: 8px 6px
+		+default_transition()
+		background-color: rgba($azul, 0.7)
+		&:hover
+			background-color: rgba($branco, 0.9)
+			span
+				background-color: $azul
+		span
+			width: 100%
+			background-color: $branco
+			height: 3px
+			margin-bottom: 5px
+			display: block
+			+default_transition()
+			+transform(rotate(0deg))
+			+opacity(1)
+			&:last-child
+				margin-bottom: 0
+	ul.menu-list
+		margin-bottom: 3rem
+		display: block !important
+		li
+			display: block
+			margin-bottom: 10px
+			a.selected
+				color: $verde
+			a
+				color: $branco
+				text-transform: uppercase
+				&:hover
+					text-decoration: none

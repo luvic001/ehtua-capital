@@ -1,0 +1,35 @@
+.form-ehtua
+	input, textarea, button
+		+default_transition()
+	input, textarea
+		border-radius: 0
+		border: 2px solid #999999
+		&::placeholder
+			text-transform: uppercase
+	textarea
+		height: 160px
+	button
+		width: 153px
+		padding: 7.5px 0
+		background-color: $verde
+		border: 1px solid $verde
+		text-transform: uppercase
+		display: flex
+		align-items: center
+		justify-content: center
+		color: $branco
+		&:hover
+			background-color: $verde-hover
+			border-color: $verde-hover
+			cursor: pointer
+		svg
+			margin-left: 8px
+			margin-right: 18px
+	.alert-message
+		display: none
+		color: $branco
+		+font-size(16px)
+
+.form-loading
+	+opacity(0.2)
+	pointer-events: none

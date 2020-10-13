@@ -1,0 +1,29 @@
+{
+  "name": "imodata-gulp",
+  "version": "1.0.0",
+  "description": "Gulp dependencies for Imotada WordPress theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://agencia_campana@bitbucket.org/agencia_campana/imodata-granato.git"
+  },
+  "author": "Agência agencia_campana",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0 .2",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglifyjs": "^0.6.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "ngrok": "^3.0.1",
+    "sass": "^1.13.0"
+  }
+}
